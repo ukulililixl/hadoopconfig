@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# attention: vm name!!!
 site=/home/hadoop/hadoop/conf
 
 sed -i '6a\
