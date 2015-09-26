@@ -2,17 +2,17 @@
 
 now=`pwd`
 
-#set up hadoop environment
+set up hadoop environment
 ha_envfile=$now/hadoop/conf/hadoop-env.sh
-#echo 'export JAVA_HOME=/usr/lib/jvm/java-7-oracle' >> $ha_envfile
-#echo 'export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true' >> $ha_envfile
+echo 'export JAVA_HOME=/usr/lib/jvm/java-7-oracle' >> $ha_envfile
+echo 'export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true' >> $ha_envfile
 
 #set up hdfs storage
-#mkdir hadoop/tmp
+mkdir hadoop/tmp
 
 #configure ssh on eachnode
-#ssh-keygen -t rsa -P ""
-#cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+ssh-keygen -t rsa -P ""
+cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 
 master="10.10.11.40"
 this=`ifconfig | grep 'inet addr:' | grep -v '127.0.0.1' | cut -d: -f2 | awk '{print $1}'`
