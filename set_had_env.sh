@@ -2,7 +2,7 @@
 
 now=`pwd`
 
-set up hadoop environment
+#set up hadoop environment
 ha_envfile=$now/hadoop/conf/hadoop-env.sh
 echo 'export JAVA_HOME=/usr/lib/jvm/java-7-oracle' >> $ha_envfile
 echo 'export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true' >> $ha_envfile
